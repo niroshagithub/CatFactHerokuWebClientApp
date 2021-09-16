@@ -22,35 +22,42 @@ namespace CatFactHerokuWebClientApp.IntegrationTests
         [Fact]
         public async Task CanGetUserUpvotes()
         {
-            // The endpoint or route of the controller action.
-            var httpResponse = await _client.GetAsync("/api/GetUserUpvotes");
+            var httpHealthResponse = await _client.GetAsync("/health");
+            if (httpHealthResponse.IsSuccessStatusCode)
+            {
+                // The endpoint or route of the controller action.
+                var httpResponse = await _client.GetAsync("/api/GetUserUpvotes");
 
-            // Must be successful.
-            httpResponse.EnsureSuccessStatusCode();
+                // Must be successful.
+                httpResponse.EnsureSuccessStatusCode();
 
-            // Deserialize and examine results.
-            httpResponse.Content.Should().NotBeNull();
-            httpResponse.Content.Headers.ContentType.Should().NotBeNull();
-            httpResponse.Content.Headers.ContentType.ToString().Should().Be("text/csv");
-            var responseData = await httpResponse.Content.ReadAsStringAsync();
-            responseData.Should().NotBeNull();
-            responseData.Should().Contain("UserName,Upvotes");
-            responseData.Should().Contain("Alex Wohlbruck");
+                // Deserialize and examine results.
+                httpResponse.Content.Should().NotBeNull();
+                httpResponse.Content.Headers.ContentType.Should().NotBeNull();
+                httpResponse.Content.Headers.ContentType.ToString().Should().Be("text/csv");
+                var responseData = await httpResponse.Content.ReadAsStringAsync();
+                responseData.Should().NotBeNull();
+                responseData.Should().Contain("UserName,Upvotes");
+
+            }
 
         }
         [Fact]
         public async Task CannotGetUserUpvotes_IfAPIisUnavailable()
         {
-            // The endpoint or route of the controller action.
-            var httpResponse = await _client.GetAsync("/api/GetUserUpvotes");
+            var httpHealthResponse = await _client.GetAsync("/health");
+            if (httpHealthResponse.IsSuccessStatusCode)
+            {
+                // The endpoint or route of the controller action.
+                var httpResponse = await _client.GetAsync("/api/GetUserUpvotes");
 
-            // Must be successful.
-            httpResponse.EnsureSuccessStatusCode();
+                // Must be successful.
+                httpResponse.EnsureSuccessStatusCode();
 
-            // Deserialize and examine results.
-            httpResponse.Content.Should().NotBeNull();
-           
+                // Deserialize and examine results.
+                httpResponse.Content.Should().NotBeNull();
 
+            }
         }
     }
 }
