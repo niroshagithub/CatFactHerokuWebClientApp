@@ -15,7 +15,7 @@ namespace CatFactsRestAPI.Controllers
         public IActionResult GetFacts()
         {
             //Arrange
-            const string jsonFilePath = @".\StaticFiles\catfacts.json";
+            const string jsonFilePath = @"StaticFiles/catfacts.json";
             string facts = System.IO.File.ReadAllText(jsonFilePath);
             var catFactsResult = FactsDTO.FromJson(facts);
             return new JsonResult(catFactsResult);
