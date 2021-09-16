@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31613.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{997466F1-9BB7-4526-B2B5-E286B8FC237C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{651B29F5-3B22-465B-90A7-7E7F8CD409F4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CatFactHerokuWebClientApp.UnitTests", "CatFactHerokuWebClientApp.UnitTests\CatFactHerokuWebClientApp.UnitTests.csproj", "{0D4061C4-D17E-4587-93B1-D1D44091F404}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CatFactHerokuWebClientApp.Web", "CatFactHerokuWebClientApp.API\CatFactHerokuWebClientApp.Web.csproj", "{009F8F8B-9C90-42C4-BA28-183AB68E0487}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CatFactHerokuWebClientApp.IntegrationTests", "CatFactHerokuWebClientApp.IntegrationTests\CatFactHerokuWebClientApp.IntegrationTests.csproj", "{78D263CA-9B9E-49D8-BA51-E6F40B8148B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestCatFactWebAPI", "TestCatFactWebAPI\TestCatFactWebAPI.csproj", "{D02628D1-B994-45F3-8789-FC0F93C7C607}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0D4061C4-D17E-4587-93B1-D1D44091F404}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D4061C4-D17E-4587-93B1-D1D44091F404}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D4061C4-D17E-4587-93B1-D1D44091F404}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D4061C4-D17E-4587-93B1-D1D44091F404}.Release|Any CPU.Build.0 = Release|Any CPU
+		{009F8F8B-9C90-42C4-BA28-183AB68E0487}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{009F8F8B-9C90-42C4-BA28-183AB68E0487}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{009F8F8B-9C90-42C4-BA28-183AB68E0487}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{009F8F8B-9C90-42C4-BA28-183AB68E0487}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78D263CA-9B9E-49D8-BA51-E6F40B8148B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78D263CA-9B9E-49D8-BA51-E6F40B8148B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78D263CA-9B9E-49D8-BA51-E6F40B8148B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78D263CA-9B9E-49D8-BA51-E6F40B8148B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D02628D1-B994-45F3-8789-FC0F93C7C607}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D02628D1-B994-45F3-8789-FC0F93C7C607}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D02628D1-B994-45F3-8789-FC0F93C7C607}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D02628D1-B994-45F3-8789-FC0F93C7C607}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0D4061C4-D17E-4587-93B1-D1D44091F404} = {651B29F5-3B22-465B-90A7-7E7F8CD409F4}
+		{009F8F8B-9C90-42C4-BA28-183AB68E0487} = {997466F1-9BB7-4526-B2B5-E286B8FC237C}
+		{78D263CA-9B9E-49D8-BA51-E6F40B8148B6} = {651B29F5-3B22-465B-90A7-7E7F8CD409F4}
+		{D02628D1-B994-45F3-8789-FC0F93C7C607} = {997466F1-9BB7-4526-B2B5-E286B8FC237C}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A53A9526-73E6-4A1C-92ED-6AC52EB40ABE}
+	EndGlobalSection
+EndGlobal
