@@ -53,7 +53,7 @@ namespace CatFactHerokuWebClientApp.UnitTests.Services
         public async Task GetUserUpvotesForFactsAsync_Returns_JsonResult()
         {
             //Arrange
-            const string jsonFilePath = @".\Inputs\catfacts_sample.json";
+            const string jsonFilePath = @"Inputs/catfacts_sample.json";
             var json = await File.ReadAllTextAsync(jsonFilePath, _cancellationToken);
             var catFactsResult = FactsResultDto.FromJson(json);
             _mockCatFactApiClient.Setup(client => client.GetFactsAsync(It.IsAny<CancellationToken>())).Returns(Task.FromResult(catFactsResult));
